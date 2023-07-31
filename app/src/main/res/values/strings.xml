@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Test Message Master</string>
+
+    <!-- Add Message Activity UI -->
+    <string name="enter_message">Enter Message</string>
+    <string name="save">Save</string>
+    <!-- Strings for the CREATE_MESSAGE shortcut -->
+    <string name="shortcut_short_label_create_message">Create Message</string>
+    <string name="shortcut_long_label_create_message">Create a new message with recipient details</string>
+
+
+    <!-- View Messages Activity UI -->
+    <string name="all_messages">All Messages</string>
+
+    <!-- Shortcut labels -->
+    <string name="shortcut_short_label1">Add New Message</string>
+    <string name="shortcut_long_label1">Add a new message to the list</string>
+    <string name="shortcut_short_label2">View Messages</string>
+    <string name="shortcut_long_label2">View all the messages in the list</string>
+    <string name="shortcut_find_chats">Find sample chats </string>
+
+
+</resources>
