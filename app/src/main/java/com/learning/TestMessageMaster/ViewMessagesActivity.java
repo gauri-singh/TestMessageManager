@@ -87,7 +87,7 @@ public class ViewMessagesActivity extends AppCompatActivity {
     }
 
     private void updateMessageList() {
-        List<Message> messages = MessageManager.getInstance().getMessage();
+        List<Message> messages = MessageManager.getInstance(ViewMessagesActivity.this).getMessage();
         List<Message> filteredMessages = messages.stream()
                 .filter(m -> m.getRecipient().toLowerCase().contains(searchQuery) ||
                         m.getMessage().toLowerCase().contains(searchQuery))

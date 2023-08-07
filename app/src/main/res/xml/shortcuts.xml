@@ -2,6 +2,12 @@
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
 
     <capability android:name="actions.intent.CREATE_MESSAGE">
+        <app-widget
+            android:identifier="GET_MESSAGES"
+            android:targetClass="com.learning.TestMessageMaster.MessageWidgetProvider"
+            android:targetPackage="com.learning.TestMessageMaster">
+            <extra android:name="hasTts" android:value="true"/>
+        </app-widget>
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.learning.TestMessageMaster"
@@ -14,32 +20,6 @@
                 android:key="recipient"/>
         </intent>
     </capability>
-
-    <shortcut
-        android:shortcutId="create_new_message"
-        android:shortcutShortLabel="@string/shortcut_short_label_create_message"
-        android:shortcutLongLabel="@string/shortcut_long_label_create_message">
-        <capability-binding android:key="actions.intent.CREATE_MESSAGE">
-            <parameter-binding
-                android:value="Message"
-                android:key="message.text"/>
-            <parameter-binding
-                android:value="Recipient"
-                android:key="message.recipient.name"/>
-        </capability-binding>
-    </shortcut>
-    <!-- Shortcut for viewing all messages -->
-    <shortcut
-        android:shortcutId="show_all_messages"
-        android:shortcutShortLabel="@string/shortcut_short_label2"
-        android:shortcutLongLabel="@string/shortcut_long_label2">
-        <capability-binding android:key="actions.intent.GET_ITEM_LIST">
-            <parameter-binding
-                android:value="Messages"
-                android:key="itemList.name"/>
-        </capability-binding>
-    </shortcut>
-
     <!-- Capability for viewing all messages -->
     <capability android:name="actions.intent.GET_ITEM_LIST">
         <intent
@@ -51,39 +31,12 @@
                 android:key="messageList"/>
         </intent>
     </capability>
-
-
-        <capability android:name="actions.intent.GET_MESSAGE">
+    <capability android:name="actions.intent.GET_MESSAGE">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:targetPackage="com.learning.TestMessageMaster"
                 android:targetClass="com.learning.TestMessageMaster.ViewMessagesActivity">
                 <parameter android:name="message.description" android:key="description"/>
-                <parameter android:name="message.temporalCoverage" android:key="temporalCoverage"/>
-                <parameter android:name="message.disambiguatingDescription" android:key="disambiguatingDescription"/>
-                <parameter android:name="message.sender.name" android:key="senderName"/>
-                <parameter android:name="message.sender.email" android:key="senderEmail"/>
-                <parameter android:name="message.recipient.name" android:key="recipientName"/>
-                <parameter android:name="message.recipient.email" android:key="recipientEmail"/>
-                <parameter android:name="message.sender.telephone" android:key="senderTelephone"/>
-                <parameter android:name="message.recipient.telephone" android:key="recipientTelephone"/>
             </intent>
-        </capability>
-        <shortcut
-            android:shortcutId="find_chats"
-            android:enabled="true"
-            android:shortcutShortLabel="@string/shortcut_find_chats"
-            android:shortcutLongLabel="@string/shortcut_find_chats">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:targetPackage="com.learning.TestMessageMaster"
-                android:targetClass="com.learning.TestMessageMaster.ViewMessagesActivity"
-                android:data="ExampleProvider" />
-        </shortcut>
-
-
-
-
-
-
+    </capability>
 </shortcuts>
