@@ -31,4 +31,30 @@
         app:layout_constraintTop_toBottomOf="@+id/addMessageButton"
         app:layout_constraintVertical_bias="0.169" />
 
+    <EditText
+        android:id="@+id/inputLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Enter the Youtube link"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/viewWebsite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewMessagesButton"
+        app:layout_constraintVertical_bias="0.792" />
+
+    <Button
+        android:id="@+id/viewWebsite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="submit and view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
