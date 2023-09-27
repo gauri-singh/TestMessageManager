@@ -13,9 +13,10 @@
         android:text="Add a message"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.286" />
+        app:layout_constraintVertical_bias="0.163" />
 
     <Button
         android:id="@+id/viewMessagesButton"
@@ -26,10 +27,10 @@
         android:text="View messages"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addMessageButton"
-        app:layout_constraintVertical_bias="0.169" />
+        app:layout_constraintVertical_bias="0.031" />
 
     <EditText
         android:id="@+id/inputLink"
@@ -41,20 +42,31 @@
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/viewWebsite"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewMessagesButton"
-        app:layout_constraintVertical_bias="0.792" />
+        app:layout_constraintVertical_bias="0.403" />
 
     <Button
         android:id="@+id/viewWebsite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="248dp"
         android:text="submit and view"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/viewYTDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewWebsite" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
